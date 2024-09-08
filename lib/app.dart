@@ -17,7 +17,7 @@ import 'data/farm/view_model/cityEntryViewModel.dart';
 import 'data/farm/view_model/weather_app_forecast_viewmodel.dart';
 
 class App extends StatelessWidget {
-  App({Key key}) : super(key: key);
+  App({required Key key}) : super(key: key);
 
   final AuthenticationRepository _authenticationRepository =
       AuthenticationRepository();
@@ -60,7 +60,7 @@ class AppView extends StatefulWidget {
 class _AppViewState extends State<AppView> {
   final _navigatorKey = GlobalKey<NavigatorState>();
 
-  NavigatorState get _navigator => _navigatorKey.currentState;
+  NavigatorState? get _navigator => _navigatorKey.currentState;
 
   @override
   Widget build(BuildContext context) {
